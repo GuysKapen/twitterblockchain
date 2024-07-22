@@ -1,5 +1,5 @@
-import { setServers } from "dns";
 import { useRouter } from "next/router";
+import { client } from '../lib/client'
 import { createContext, useEffect, useState } from "react";
 
 export const TwitterContext = createContext();
@@ -157,22 +157,22 @@ export const TwitterProvider = ({ children }) => {
             coverImage: response[0].coverImage,
             isProfileImageNft: response[0].isProfileImageNft,
         })
-
-        return (
-            <TwitterContext.Provider
-                value={{
-                    appStatus,
-                    currentAccount,
-                    connectWallet,
-                    tweets,
-                    fetchTweets,
-                    setAppStatus,
-                    getNftProfileImage,
-                    currentUser,
-                    getCurrentUserDetails,
-                }}>
-
-            </TwitterContext.Provider>
-        )
     }
+
+    return (
+        <TwitterContext.Provider
+            value={{
+                appStatus,
+                currentAccount,
+                connectWallet,
+                tweets,
+                fetchTweets,
+                setAppStatus,
+                getNftProfileImage,
+                currentUser,
+                getCurrentUserDetails,
+            }}>
+
+        </TwitterContext.Provider>
+    )
 }
