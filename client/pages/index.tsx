@@ -47,7 +47,7 @@ const Home = () => {
 
   const noUserFound = (
     <div className={style.loginContainer}>
-      <Image src={metamaskLogo} width={200} height={200} />
+      <Image alt='meta-mask-logo' src={metamaskLogo} width={200} height={200} />
       <div
         className={style.walletConnectButton}
         onClick={() => connectWallet()}
@@ -60,7 +60,7 @@ const Home = () => {
 
   const noMetaMaskFound = (
     <div className={style.loginContainer}>
-      <Image src={metamaskLogo} width={200} height={200} />
+      <Image alt='meta-mask-logo' src={metamaskLogo} width={200} height={200} />
       <div className={style.loginContent}>
         <a
           target='_blank'
@@ -76,7 +76,7 @@ const Home = () => {
 
   const error = (
     <div className={style.loginContainer}>
-      <Image src={errorImg} width={250} height={200} />
+      <Image alt='error' src={errorImg} width={250} height={200} />
       <div className={style.loginContent}>
         An error occurred. Please try again later or from another browser.
       </div>

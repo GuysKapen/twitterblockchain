@@ -1,4 +1,4 @@
-import ProfileImageMinterContractAbi from './ProfileImageNfts.json'
+import ProfileImageMinterContractAbi from './ProfileImageNFT.json'
 
 export const contractABI = ProfileImageMinterContractAbi.abi
 export const contractAddress = '0xA10F4e6054CF7C9d0aEa9428990691B4989AB185'

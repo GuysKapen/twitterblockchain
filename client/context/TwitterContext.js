@@ -5,7 +5,7 @@ import { createContext, useEffect, useState } from "react";
 export const TwitterContext = createContext();
 
 export const TwitterProvider = ({ children }) => {
-    const [appStatus, setAppStatus] = useState('');
+    const [appStatus, setAppStatus] = useState('loading');
     const [currentAccount, setCurrentAccount] = useState('');
     const [currentUser, setCurrentUser] = useState({});
     const [tweets, setTweets] = useState([]);
@@ -171,7 +171,7 @@ export const TwitterProvider = ({ children }) => {
                 getNftProfileImage,
                 currentUser,
                 getCurrentUserDetails,
-            }}>
+            }}>{children}
 
         </TwitterContext.Provider>
     )
